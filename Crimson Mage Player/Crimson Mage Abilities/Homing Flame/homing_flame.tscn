@@ -1,0 +1,454 @@
+[gd_scene load_steps=99 format=3 uid="uid://bpfhd4o4gymnd"]
+
+[ext_resource type="Texture2D" uid="uid://byujyept8i6rc" path="res://Crimson Mage Player/Crimson Mage Abilities/Homing Flame/B Flame 1.png" id="1_4qk78"]
+[ext_resource type="Script" path="res://Crimson Mage Player/Crimson Mage Abilities/Homing Flame/homing_flame.gd" id="1_xex5b"]
+[ext_resource type="Texture2D" uid="uid://cnclvntvdlsfj" path="res://Crimson Mage Player/Crimson Mage Abilities/Homing Flame/B Flame 2.png" id="2_6c8jt"]
+[ext_resource type="Texture2D" uid="uid://bgq62oudl6gsa" path="res://Crimson Mage Player/Crimson Mage Abilities/Homing Flame/B Flame 3.png" id="3_2uajn"]
+[ext_resource type="Texture2D" uid="uid://cl4h8gs8jhmkp" path="res://Crimson Mage Player/Crimson Mage Abilities/Homing Flame/B Flame 4.png" id="4_8tbn7"]
+[ext_resource type="Texture2D" uid="uid://6faoqs3srchf" path="res://Crimson Mage Player/Crimson Mage Abilities/Homing Flame/B Flame 5.png" id="5_vcljd"]
+[ext_resource type="Texture2D" uid="uid://dtxohugv1ykhk" path="res://Crimson Mage Player/Crimson Mage Abilities/Homing Flame/B Flame 6.png" id="6_kbebt"]
+[ext_resource type="Texture2D" uid="uid://c58p8afqw7kub" path="res://Crimson Mage Player/Crimson Mage Abilities/Homing Flame/B Flame 7.png" id="7_vt51f"]
+[ext_resource type="Texture2D" uid="uid://pvs7dkd3a1me" path="res://Crimson Mage Player/Crimson Mage Abilities/Homing Flame/B Flame 8.png" id="8_grr2b"]
+[ext_resource type="Texture2D" uid="uid://b2sp4nm81q2i4" path="res://Crimson Mage Player/Crimson Mage Abilities/Homing Flame/B Flame 9.png" id="9_2ncwr"]
+[ext_resource type="Texture2D" uid="uid://d0wpgbb0pa6du" path="res://Crimson Mage Player/Crimson Mage Abilities/Homing Flame/B Flame 10.png" id="10_c1dut"]
+[ext_resource type="Texture2D" uid="uid://nfmffscg4sjr" path="res://Crimson Mage Player/Crimson Mage Abilities/Homing Flame/B Flame 11.png" id="11_nm6qs"]
+[ext_resource type="Texture2D" uid="uid://dpyjafqt7e44v" path="res://Crimson Mage Player/Crimson Mage Abilities/Homing Flame/B Flame 12.png" id="12_fxwdf"]
+[ext_resource type="Texture2D" uid="uid://0exuxcrtmmlv" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire1.png" id="13_e7qwd"]
+[ext_resource type="Texture2D" uid="uid://bomq8mamnaan3" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire2.png" id="14_kg6ak"]
+[ext_resource type="Texture2D" uid="uid://b008s4rw5nr8x" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire3.png" id="15_w0fvp"]
+[ext_resource type="Texture2D" uid="uid://djj7odd1xslmi" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire4.png" id="16_ftr3l"]
+[ext_resource type="Texture2D" uid="uid://d3rrunev1npxl" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire5.png" id="17_ovgv2"]
+[ext_resource type="Texture2D" uid="uid://du32pj6yti6tu" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire6.png" id="18_axoov"]
+[ext_resource type="Texture2D" uid="uid://coo2bj7kc4gj6" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire7.png" id="19_h7v0o"]
+[ext_resource type="Texture2D" uid="uid://7wnx4s7safg6" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire8.png" id="20_aa66e"]
+[ext_resource type="Texture2D" uid="uid://ciyu8sobrohri" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire9.png" id="21_xlwmy"]
+[ext_resource type="Texture2D" uid="uid://bv15ie48g0gks" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire10.png" id="22_jrwwi"]
+[ext_resource type="Texture2D" uid="uid://fs646l8w6g4x" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire11.png" id="23_j15aj"]
+[ext_resource type="Texture2D" uid="uid://b5tlroold7ecs" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire12.png" id="24_h2r2h"]
+[ext_resource type="Texture2D" uid="uid://dupawia2nkqij" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire13.png" id="25_cfsfv"]
+[ext_resource type="Texture2D" uid="uid://b8cjyfb1bjyqx" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire14.png" id="26_gp68q"]
+[ext_resource type="Texture2D" uid="uid://dn7oeqyrianml" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire15.png" id="27_5tjb0"]
+[ext_resource type="Texture2D" uid="uid://cuhxh4t3daqi0" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire16.png" id="28_lnf58"]
+[ext_resource type="Texture2D" uid="uid://so3km8sd06ts" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire17.png" id="29_bruaw"]
+[ext_resource type="Texture2D" uid="uid://btgws0o5oq7ax" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire18.png" id="30_wwa08"]
+[ext_resource type="Texture2D" uid="uid://i5pnblwwjsyr" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire19.png" id="31_vmcrp"]
+[ext_resource type="Texture2D" uid="uid://cpwhkrjay4och" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire20.png" id="32_lhvu8"]
+[ext_resource type="Texture2D" uid="uid://c5kpf26vac0sg" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire21.png" id="33_0rxix"]
+[ext_resource type="Texture2D" uid="uid://g6u44cnv4pp2" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire22.png" id="34_6gdg3"]
+[ext_resource type="Texture2D" uid="uid://bv54o3t2y2npp" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire23.png" id="35_rwn6d"]
+[ext_resource type="Texture2D" uid="uid://tarof046mq10" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire24.png" id="36_sohbc"]
+[ext_resource type="Texture2D" uid="uid://coawsa887u1ov" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire25.png" id="37_u10bm"]
+[ext_resource type="Texture2D" uid="uid://bqsom5h817ni8" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire26.png" id="38_3cdk2"]
+[ext_resource type="Texture2D" uid="uid://bopymal3md3n1" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire27.png" id="39_ncigc"]
+[ext_resource type="Texture2D" uid="uid://balfrb0rxxvdd" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire28.png" id="40_145ep"]
+[ext_resource type="Texture2D" uid="uid://xwph7mvkxu00" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire29.png" id="41_4jnb5"]
+[ext_resource type="Texture2D" uid="uid://4bqbkj4oxk7l" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire30.png" id="42_j5uv0"]
+[ext_resource type="Texture2D" uid="uid://cplutxsl7yep1" path="res://Crimson Mage Player/Crimson Mage Abilities/Homing Flame/Wisp/Wisp.png" id="43_85cle"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_alab4"]
+radius = 5.09902
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fos3"]
+atlas = ExtResource("1_4qk78")
+region = Rect2(0, 0, 51, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvdgf"]
+atlas = ExtResource("2_6c8jt")
+region = Rect2(0, 0, 51, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2tq8"]
+atlas = ExtResource("3_2uajn")
+region = Rect2(0, 0, 51, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlbgd"]
+atlas = ExtResource("4_8tbn7")
+region = Rect2(0, 0, 51, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iojmw"]
+atlas = ExtResource("5_vcljd")
+region = Rect2(0, 0, 51, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqiyg"]
+atlas = ExtResource("6_kbebt")
+region = Rect2(0, 0, 51, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2hd5"]
+atlas = ExtResource("7_vt51f")
+region = Rect2(0, 0, 51, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhkak"]
+atlas = ExtResource("8_grr2b")
+region = Rect2(0, 0, 51, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kegt"]
+atlas = ExtResource("9_2ncwr")
+region = Rect2(0, 0, 51, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2crr"]
+atlas = ExtResource("10_c1dut")
+region = Rect2(0, 0, 51, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wf2a6"]
+atlas = ExtResource("11_nm6qs")
+region = Rect2(0, 0, 51, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfnpb"]
+atlas = ExtResource("12_fxwdf")
+region = Rect2(0, 0, 51, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dag7"]
+atlas = ExtResource("13_e7qwd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q481w"]
+atlas = ExtResource("14_kg6ak")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jxnd"]
+atlas = ExtResource("15_w0fvp")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vu58q"]
+atlas = ExtResource("16_ftr3l")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2typt"]
+atlas = ExtResource("17_ovgv2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_daefq"]
+atlas = ExtResource("18_axoov")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fag6i"]
+atlas = ExtResource("19_h7v0o")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8nk73"]
+atlas = ExtResource("20_aa66e")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ad40"]
+atlas = ExtResource("21_xlwmy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7queh"]
+atlas = ExtResource("22_jrwwi")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxqsh"]
+atlas = ExtResource("23_j15aj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shjp6"]
+atlas = ExtResource("24_h2r2h")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btpll"]
+atlas = ExtResource("25_cfsfv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnpwi"]
+atlas = ExtResource("26_gp68q")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0gb3"]
+atlas = ExtResource("27_5tjb0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibbxo"]
+atlas = ExtResource("28_lnf58")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xuui7"]
+atlas = ExtResource("29_bruaw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ox7x"]
+atlas = ExtResource("30_wwa08")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmmix"]
+atlas = ExtResource("31_vmcrp")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpopj"]
+atlas = ExtResource("32_lhvu8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6r21"]
+atlas = ExtResource("33_0rxix")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wiavu"]
+atlas = ExtResource("34_6gdg3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r62w0"]
+atlas = ExtResource("35_rwn6d")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4d5eb"]
+atlas = ExtResource("36_sohbc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3dup"]
+atlas = ExtResource("37_u10bm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ounc"]
+atlas = ExtResource("38_3cdk2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eg4b7"]
+atlas = ExtResource("39_ncigc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jvck"]
+atlas = ExtResource("40_145ep")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kattu"]
+atlas = ExtResource("41_4jnb5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epftc"]
+atlas = ExtResource("42_j5uv0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50ohf"]
+atlas = ExtResource("43_85cle")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xh0o8"]
+atlas = ExtResource("43_85cle")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xk50i"]
+atlas = ExtResource("43_85cle")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ayw04"]
+atlas = ExtResource("43_85cle")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhtd6"]
+atlas = ExtResource("43_85cle")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqxbo"]
+atlas = ExtResource("43_85cle")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idtng"]
+atlas = ExtResource("43_85cle")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqrrf"]
+atlas = ExtResource("43_85cle")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ox0t"]
+atlas = ExtResource("43_85cle")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjd3a"]
+atlas = ExtResource("43_85cle")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nj8j1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fos3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvdgf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2tq8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlbgd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iojmw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqiyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2hd5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhkak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1kegt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2crr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wf2a6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jfnpb")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dag7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q481w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jxnd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vu58q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2typt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_daefq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fag6i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8nk73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ad40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7queh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxqsh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shjp6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btpll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnpwi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0gb3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibbxo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xuui7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ox7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmmix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpopj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6r21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wiavu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r62w0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4d5eb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3dup")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ounc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eg4b7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jvck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kattu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epftc")
+}],
+"loop": true,
+"name": &"Idle2",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50ohf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xh0o8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xk50i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ayw04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhtd6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqxbo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idtng")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqrrf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ox0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjd3a")
+}],
+"loop": true,
+"name": &"Idle3",
+"speed": 10.0
+}]
+
+[node name="HomingFlame" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_xex5b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 6)
+shape = SubResource("CircleShape2D_alab4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3, 3)
+sprite_frames = SubResource("SpriteFrames_nj8j1")
+animation = &"Idle2"
+autoplay = "Idle2"
+frame_progress = 0.762699
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

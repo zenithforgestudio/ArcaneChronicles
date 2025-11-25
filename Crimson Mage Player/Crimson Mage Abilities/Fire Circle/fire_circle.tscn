@@ -1,0 +1,335 @@
+[gd_scene load_steps=77 format=3 uid="uid://ckq6yqaw78vv4"]
+
+[ext_resource type="Script" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/fire_circle.gd" id="1_owe7x"]
+[ext_resource type="Texture2D" uid="uid://dulti8rp3vtk5" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet1.png" id="2_mfdrr"]
+[ext_resource type="Texture2D" uid="uid://cr8es1xvu0v0g" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet2.png" id="3_68fp8"]
+[ext_resource type="Texture2D" uid="uid://cse3evxpwk08d" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet3.png" id="4_gb6uj"]
+[ext_resource type="Texture2D" uid="uid://dfb1ga6ddcifa" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/ChatGPT Image 2 mai 2025, 16_05_48.png" id="4_vt2af"]
+[ext_resource type="Texture2D" uid="uid://cubbeko4arfqp" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet4.png" id="5_qi5oo"]
+[ext_resource type="Script" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/node_2d.gd" id="5_vwi30"]
+[ext_resource type="Texture2D" uid="uid://b8uekdhar6soy" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet5.png" id="6_j8al5"]
+[ext_resource type="Shader" path="res://Shaders/fire_circle.gdshader" id="6_o63x5"]
+[ext_resource type="Texture2D" uid="uid://kvjsorddfs0e" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet6.png" id="7_6ed1f"]
+[ext_resource type="Texture2D" uid="uid://id7jjoxpnxo1" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet7.png" id="8_o3hjh"]
+[ext_resource type="Texture2D" uid="uid://f2ymtoliqwex" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet8.png" id="9_62slo"]
+[ext_resource type="Texture2D" uid="uid://b1g12fb2tnny4" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet9.png" id="10_k57ca"]
+[ext_resource type="Texture2D" uid="uid://cafep33xguebv" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet10.png" id="11_5dum5"]
+[ext_resource type="Texture2D" uid="uid://cnbehr6liglhf" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet11.png" id="12_xw3yy"]
+[ext_resource type="Texture2D" uid="uid://bvborjlmnk5l4" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet12.png" id="13_00ya5"]
+[ext_resource type="Texture2D" uid="uid://c24oeidnalym" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet13.png" id="14_dhp0k"]
+[ext_resource type="Texture2D" uid="uid://4swdwhr7el6i" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet14.png" id="15_8m4w0"]
+[ext_resource type="Texture2D" uid="uid://dcd4dfk4tpxf0" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet15.png" id="16_yk3hi"]
+[ext_resource type="Texture2D" uid="uid://cbkjq8xcfas1v" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet16.png" id="17_mefsi"]
+[ext_resource type="Texture2D" uid="uid://dtotrrrm6mph4" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet17.png" id="18_sheh8"]
+[ext_resource type="Texture2D" uid="uid://nyyrinlln7ss" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet18.png" id="19_x04sp"]
+[ext_resource type="Texture2D" uid="uid://ssahxvi60clt" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet19.png" id="20_f7lwn"]
+[ext_resource type="Texture2D" uid="uid://bawo5q1x6caia" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet20.png" id="21_twdqh"]
+[ext_resource type="Texture2D" uid="uid://bjanskdhv4vue" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet21.png" id="22_bkarn"]
+[ext_resource type="Texture2D" uid="uid://b0lixesqbipqy" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet22.png" id="23_ekl24"]
+[ext_resource type="Texture2D" uid="uid://c01mrlcl0y6l4" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet23.png" id="24_svxsp"]
+[ext_resource type="Texture2D" uid="uid://ci0ffxjb8wj3g" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet24.png" id="25_ftd3a"]
+[ext_resource type="Texture2D" uid="uid://cpbfi1ou2ckmj" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet25.png" id="26_q8328"]
+[ext_resource type="Texture2D" uid="uid://ccqsgx76u1h1l" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet26.png" id="27_rspei"]
+[ext_resource type="Texture2D" uid="uid://cr4lo7ovy06gb" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet27.png" id="28_3p1uw"]
+[ext_resource type="Texture2D" uid="uid://dvorg5aoqh4ys" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet28.png" id="29_his8o"]
+[ext_resource type="Texture2D" uid="uid://cbr5o4mvdulps" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet29.png" id="30_51487"]
+[ext_resource type="Texture2D" uid="uid://bsl1yb7jaqlwu" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet30.png" id="31_1r6o4"]
+[ext_resource type="Texture2D" uid="uid://dbp63qvppwbaf" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet31.png" id="32_bl4mm"]
+[ext_resource type="Texture2D" uid="uid://dsseidc3dyw58" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet32.png" id="33_2xv1j"]
+[ext_resource type="Texture2D" uid="uid://bkekinnemx76u" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet33.png" id="34_6vqke"]
+[ext_resource type="Texture2D" uid="uid://biae4u7rgbq63" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet34.png" id="35_e76lf"]
+[ext_resource type="Texture2D" uid="uid://dfvuwpcp44y3m" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet35.png" id="36_yrgsc"]
+[ext_resource type="Texture2D" uid="uid://b4jvsknogvxol" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet36.png" id="37_h8fjc"]
+[ext_resource type="Texture2D" uid="uid://csqqe6aabeeex" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet37.png" id="38_xvbq4"]
+[ext_resource type="Texture2D" uid="uid://uybuxxsgnexf" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet38.png" id="39_ja0y1"]
+[ext_resource type="Texture2D" uid="uid://dt4fdpvqhd16d" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet39.png" id="40_ttusl"]
+[ext_resource type="Texture2D" uid="uid://bva8t8cdk8865" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet40.png" id="41_nbrjl"]
+[ext_resource type="Texture2D" uid="uid://rx6jm10523wh" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet41.png" id="42_k2i4k"]
+[ext_resource type="Texture2D" uid="uid://c62yvln77wmc7" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet42.png" id="43_6122l"]
+[ext_resource type="Texture2D" uid="uid://d0cru8v0lu452" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet43.png" id="44_1hr4t"]
+[ext_resource type="Texture2D" uid="uid://d4dg471gljpnq" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet44.png" id="45_8l511"]
+[ext_resource type="Texture2D" uid="uid://by0i43jsh0b2o" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet45.png" id="46_2yx4n"]
+[ext_resource type="Texture2D" uid="uid://bshds102rtn8m" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet46.png" id="47_ei1mb"]
+[ext_resource type="Texture2D" uid="uid://beyql0maemjka" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet47.png" id="48_jko3n"]
+[ext_resource type="Texture2D" uid="uid://bp2236jmyw8dc" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet48.png" id="49_d4d8a"]
+[ext_resource type="Texture2D" uid="uid://c2s0wpsxy6ngu" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet49.png" id="50_w3amj"]
+[ext_resource type="Texture2D" uid="uid://0y6l6dm1r8jw" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Circle/New Fire Circle/fire circle animation-sheet50.png" id="51_ihc7r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s3l01"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncnk0"]
+atlas = ExtResource("2_mfdrr")
+region = Rect2(0, 0, 103, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urkvh"]
+atlas = ExtResource("3_68fp8")
+region = Rect2(0, 0, 117, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qli6"]
+atlas = ExtResource("4_gb6uj")
+region = Rect2(0, 0, 128, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkr28"]
+atlas = ExtResource("5_qi5oo")
+region = Rect2(0, 0, 142, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgjpy"]
+atlas = ExtResource("6_j8al5")
+region = Rect2(0, 0, 156, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evd3p"]
+atlas = ExtResource("7_6ed1f")
+region = Rect2(0, 0, 170, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ao1u7"]
+atlas = ExtResource("8_o3hjh")
+region = Rect2(0, 0, 184, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xs832"]
+atlas = ExtResource("9_62slo")
+region = Rect2(0, 0, 199, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqm3x"]
+atlas = ExtResource("10_k57ca")
+region = Rect2(0, 0, 213, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrb7w"]
+atlas = ExtResource("11_5dum5")
+region = Rect2(0, 0, 227, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgp5c"]
+atlas = ExtResource("12_xw3yy")
+region = Rect2(0, 0, 241, 136)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6itx"]
+atlas = ExtResource("13_00ya5")
+region = Rect2(0, 0, 256, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljc34"]
+atlas = ExtResource("14_dhp0k")
+region = Rect2(0, 0, 270, 152)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gltf1"]
+atlas = ExtResource("15_8m4w0")
+region = Rect2(0, 0, 284, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clmss"]
+atlas = ExtResource("16_yk3hi")
+region = Rect2(0, 0, 298, 168)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hvyy"]
+atlas = ExtResource("17_mefsi")
+region = Rect2(0, 0, 312, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brywg"]
+atlas = ExtResource("18_sheh8")
+region = Rect2(0, 0, 327, 184)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvbcn"]
+atlas = ExtResource("19_x04sp")
+region = Rect2(0, 0, 341, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0nnxs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncnk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urkvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qli6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qkr28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgjpy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evd3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ao1u7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xs832")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqm3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrb7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgp5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6itx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljc34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gltf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clmss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hvyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brywg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvbcn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_f7lwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_twdqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_bkarn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ekl24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_svxsp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ftd3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_q8328")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_rspei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_3p1uw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_his8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_51487")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_1r6o4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_bl4mm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_2xv1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_6vqke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_e76lf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_yrgsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_h8fjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_xvbq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ja0y1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_ttusl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_nbrjl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_k2i4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_6122l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_1hr4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_8l511")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_2yx4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_ei1mb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_jko3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_d4d8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_w3amj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_ihc7r")
+}],
+"loop": false,
+"name": &"Fire Circle",
+"speed": 15.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2j1xc"]
+shader = ExtResource("6_o63x5")
+shader_parameter/time = null
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_7lw44"]
+viewport_path = NodePath("FireCircleViewport")
+
+[node name="FireCircle" type="Node2D"]
+script = ExtResource("1_owe7x")
+
+[node name="CooldownTimer" type="Timer" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_s3l01")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0nnxs")
+animation = &"Fire Circle"
+autoplay = "Fire Circle"
+frame = 49
+frame_progress = 1.0
+
+[node name="FireCircleSprite" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("4_vt2af")
+
+[node name="FireCircleViewport" type="SubViewport" parent="."]
+disable_3d = true
+transparent_bg = true
+size = Vector2i(360, 360)
+render_target_update_mode = 4
+
+[node name="ArcDrawer" type="Node2D" parent="FireCircleViewport"]
+script = ExtResource("5_vwi30")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_2j1xc")
+texture = SubResource("ViewportTexture_7lw44")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

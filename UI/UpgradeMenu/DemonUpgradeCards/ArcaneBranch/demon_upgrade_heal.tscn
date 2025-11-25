@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhv1v7qltgrx2"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_jnqvc"]
+[ext_resource type="Script" uid="uid://g7fikmf2nw7f" path="res://UI/UpgradeMenu/DemonUpgradeCards/ArcaneBranch/demon_upgrade_heal.gd" id="2_abnco"]
+[ext_resource type="Texture2D" uid="uid://qhheg0wqhk11" path="res://Crimson Palette/Collectibles/Heart Round - Copy (2).png" id="2_ijpp2"]
+
+[node name="DemonUpgradeHeal" instance=ExtResource("1_jnqvc")]
+script = ExtResource("2_abnco")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Small
+Gift"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("2_ijpp2")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+text = "Heal 1 
+healthpoint
+and level up"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

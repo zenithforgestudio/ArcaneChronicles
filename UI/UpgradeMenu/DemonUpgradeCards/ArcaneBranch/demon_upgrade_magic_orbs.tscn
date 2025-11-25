@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdu75pivgwm5c"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_ftsqj"]
+[ext_resource type="Script" uid="uid://dgvn5i8udai8v" path="res://UI/UpgradeMenu/DemonUpgradeCards/ArcaneBranch/demon_upgrade_magic_orbs.gd" id="2_7i5ox"]
+[ext_resource type="Texture2D" uid="uid://doeckor0yafl5" path="res://Crimson Mage Player/Crimson Mage Abilities/Magic Orb/Magic Orb Frame2.png" id="2_mvmdl"]
+
+[node name="DemonUpgradeMagicOrbs" instance=ExtResource("1_ftsqj")]
+script = ExtResource("2_7i5ox")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Circle of
+Death"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("2_mvmdl")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+text = "Increase speed,
+reduce damage
+and knockback"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

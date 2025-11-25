@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmsic7qsyxftj"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_kh1ly"]
+[ext_resource type="Script" uid="uid://bu7hml2tg8n8i" path="res://UI/UpgradeMenu/DemonUpgradeCards/ArcaneBranch/demon_upgrade_basic_bullet.gd" id="2_om0s0"]
+[ext_resource type="Texture2D" uid="uid://c6i1m2ffmjfhb" path="res://UI/UpgradeMenu/UpgradeCards/Skull Bullet Icon.png" id="2_sihb4"]
+
+[node name="DemonUpgradeBasicBullet" instance=ExtResource("1_kh1ly")]
+script = ExtResource("2_om0s0")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Curse of
+Greed"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("2_sihb4")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+text = "Killing an enemy
+with basic attack
+can spawn xp orb"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

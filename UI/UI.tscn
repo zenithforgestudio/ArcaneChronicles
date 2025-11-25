@@ -1,0 +1,423 @@
+[gd_scene load_steps=20 format=3 uid="uid://bbebnsx21y1m8"]
+
+[ext_resource type="Texture2D" uid="uid://jm8ss0enq1ej" path="res://UI/XP Bar Under.png" id="1_krmfb"]
+[ext_resource type="Script" path="res://UI/ui.gd" id="1_xfihr"]
+[ext_resource type="Script" path="res://UI/joystick_base.gd" id="2_14hdt"]
+[ext_resource type="Texture2D" uid="uid://b0aqpsvrqtp51" path="res://UI/XP Bar Progress.png" id="2_bfxj4"]
+[ext_resource type="Texture2D" uid="uid://dav18k811ndpo" path="res://UI/JoyStick/joyknobpng.png" id="2_mmbsd"]
+[ext_resource type="Texture2D" uid="uid://cv0uox3icvbvs" path="res://UI/JoyStick/joyring.png" id="3_67ejm"]
+[ext_resource type="Script" path="res://UI/level_xp.gd" id="3_hw8gw"]
+[ext_resource type="Script" path="res://UI/health_bar.gd" id="4_l82qh"]
+[ext_resource type="Script" path="res://UI/knob.gd" id="4_wmhpa"]
+[ext_resource type="Script" path="res://UI/time_hbox_container.gd" id="5_ur52p"]
+[ext_resource type="FontFile" uid="uid://xg0q0xdhjpgd" path="res://Fonts/antiquity-print.ttf" id="6_c34uj"]
+[ext_resource type="Texture2D" uid="uid://dd1gkfuhjsq7b" path="res://UI/Pixel_art_skull_Icon-removebg-preview - Copy.png" id="7_58k81"]
+[ext_resource type="PackedScene" uid="uid://cahoh3aq1oupb" path="res://UI/JoyStick/joystick.tscn" id="13_ja214"]
+
+[sub_resource type="Animation" id="Animation_s0ds6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/TextureRect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_q1vkl"]
+resource_name = "SkullRotation"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/TextureRect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.35, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.261799, -0.261799, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_frj8f"]
+_data = {
+"RESET": SubResource("Animation_s0ds6"),
+"SkullRotation": SubResource("Animation_q1vkl")
+}
+
+[sub_resource type="Animation" id="Animation_aef2v"]
+resource_name = "FadeInEndGameContainer"
+length = 2.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/EndGameLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.835294, 0.235294, 0.415686, 0), Color(0.835294, 0.235294, 0.415686, 0), Color(0.835294, 0.235294, 0.415686, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/QuitButton/QuitLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.835294, 0.235294, 0.415686, 0), Color(0.835294, 0.235294, 0.415686, 0), Color(0.835294, 0.235294, 0.415686, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer/ReviveButton/ReviveLabel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.835294, 0.235294, 0.415686, 0), Color(0.835294, 0.235294, 0.415686, 0), Color(0.835294, 0.235294, 0.415686, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4wfiq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/EndGameLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.835294, 0.235294, 0.415686, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/QuitButton/QuitLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.835294, 0.235294, 0.415686, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer/ReviveButton/ReviveLabel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.835294, 0.235294, 0.415686, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jbvub"]
+_data = {
+"FadeInEndGameContainer": SubResource("Animation_aef2v"),
+"RESET": SubResource("Animation_4wfiq")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_xfihr")
+
+[node name="JoystickBase" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 192.0
+offset_top = 276.0
+offset_right = 232.0
+offset_bottom = 316.0
+script = ExtResource("2_14hdt")
+
+[node name="Knob" type="TextureRect" parent="JoystickBase"]
+layout_mode = 0
+offset_left = -50.0
+offset_top = -51.0
+offset_right = 1870.0
+offset_bottom = 1869.0
+rotation = 0.0127974
+scale = Vector2(0.03, 0.03)
+mouse_filter = 0
+texture = ExtResource("2_mmbsd")
+script = ExtResource("4_wmhpa")
+
+[node name="Circle" type="TextureRect" parent="JoystickBase"]
+layout_mode = 0
+offset_left = -80.0
+offset_top = -78.0
+offset_right = 1840.0
+offset_bottom = 1842.0
+scale = Vector2(0.06, 0.06)
+mouse_filter = 0
+texture = ExtResource("3_67ejm")
+
+[node name="JoyStickButton" type="Button" parent="JoystickBase"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -83.0
+offset_top = -79.0
+offset_right = -75.0
+offset_bottom = -71.0
+scale = Vector2(15, 15)
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="LevelXP" type="TextureProgressBar" parent="Control/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0.784314)
+layout_mode = 2
+step = 0.1
+texture_under = ExtResource("1_krmfb")
+texture_progress = ExtResource("2_bfxj4")
+tint_under = Color(0.277528, 0.277528, 0.277528, 1)
+script = ExtResource("3_hw8gw")
+
+[node name="Control" type="Control" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HealthBar" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("4_l82qh")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 0
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+
+[node name="KillCountBox" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Control2" type="Control" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/KillCountBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/KillCountBox/Control2"]
+self_modulate = Color(0.486275, 0.0941176, 0.235294, 1)
+layout_mode = 2
+offset_left = 8.0
+offset_top = -8.0
+offset_right = 23.0
+offset_bottom = 28.0
+pivot_offset = Vector2(5, 12)
+theme_override_fonts/font = ExtResource("6_c34uj")
+theme_override_font_sizes/font_size = 24
+text = "0
+"
+
+[node name="Control" type="Control" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/KillCountBox"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/KillCountBox/Control"]
+layout_mode = 2
+offset_left = -42.0
+offset_top = -3.0
+offset_right = -15.0
+offset_bottom = 29.0
+pivot_offset = Vector2(13.5, 14)
+texture = ExtResource("7_58k81")
+
+[node name="SkullAnimationPlayer" type="AnimationPlayer" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/KillCountBox"]
+libraries = {
+"": SubResource("AnimationLibrary_frj8f")
+}
+
+[node name="Control" type="Control" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control4" type="Control" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TimeHboxContainer" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer"]
+modulate = Color(0.486275, 0.0941176, 0.235294, 1)
+layout_mode = 2
+alignment = 1
+script = ExtResource("5_ur52p")
+
+[node name="MinutesLabel" type="Label" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/TimeHboxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_c34uj")
+theme_override_font_sizes/font_size = 25
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dots Label" type="Label" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/TimeHboxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_c34uj")
+theme_override_font_sizes/font_size = 25
+text = ":"
+
+[node name="SecondsLabel" type="Label" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/TimeHboxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_c34uj")
+theme_override_font_sizes/font_size = 25
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/TimeHboxContainer"]
+process_mode = 1
+autostart = true
+
+[node name="TextLabel" type="Label" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer"]
+self_modulate = Color(0.486275, 0.0941176, 0.235294, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_c34uj")
+text = "Level 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control2" type="Control" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_bottom = 100
+
+[node name="Control" type="Control" parent="Control/MarginContainer/VBoxContainer2/MarginContainer"]
+layout_mode = 2
+
+[node name="HealPlayerTimer" type="Timer" parent="."]
+wait_time = 120.0
+
+[node name="EndGameContainer" type="MarginContainer" parent="."]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EndGameContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="EndGameLabel" type="Label" parent="EndGameContainer/VBoxContainer"]
+modulate = Color(0.835294, 0.235294, 0.415686, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_c34uj")
+theme_override_font_sizes/font_size = 40
+text = "You Won!"
+horizontal_alignment = 1
+
+[node name="QuitButton" type="TextureButton" parent="EndGameContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="QuitLabel" type="Label" parent="EndGameContainer/VBoxContainer/QuitButton"]
+modulate = Color(0.835294, 0.235294, 0.415686, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_c34uj")
+theme_override_font_sizes/font_size = 24
+text = "Quit?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReviveButton" type="TextureButton" parent="EndGameContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="ReviveLabel" type="Label" parent="EndGameContainer/VBoxContainer/ReviveButton"]
+modulate = Color(0.835294, 0.235294, 0.415686, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_c34uj")
+theme_override_font_sizes/font_size = 24
+text = "Revive?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EndGameContainer"]
+libraries = {
+"": SubResource("AnimationLibrary_jbvub")
+}
+
+[node name="Joystick" parent="." instance=ExtResource("13_ja214")]
+position = Vector2(100, 266)
+
+[connection signal="button_down" from="JoystickBase/JoyStickButton" to="JoystickBase/Knob" method="_on_joy_stick_button_button_down"]
+[connection signal="button_up" from="JoystickBase/JoyStickButton" to="JoystickBase/Knob" method="_on_joy_stick_button_button_up"]
+[connection signal="timeout" from="Control/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/TimeHboxContainer/Timer" to="Control/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/TimeHboxContainer" method="_on_timer_timeout"]
+[connection signal="timeout" from="HealPlayerTimer" to="Control/MarginContainer/VBoxContainer/HBoxContainer2/HealthBar" method="_on_heal_player_timer_timeout"]
+[connection signal="pressed" from="EndGameContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="EndGameContainer/VBoxContainer/ReviveButton" to="." method="_on_revive_button_pressed"]

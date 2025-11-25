@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://dbg0k6kts5i3r"]
+
+[ext_resource type="Texture2D" uid="uid://bjfygq643i8yx" path="res://Pixel Environment/Structure #2/Structure #2.png" id="1_ofq52"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfick"]
+atlas = ExtResource("1_ofq52")
+region = Rect2(0, 0, 78, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uuror"]
+atlas = ExtResource("1_ofq52")
+region = Rect2(78, 0, 78, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysfll"]
+atlas = ExtResource("1_ofq52")
+region = Rect2(156, 0, 78, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hs1ta"]
+atlas = ExtResource("1_ofq52")
+region = Rect2(234, 0, 78, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijys6"]
+atlas = ExtResource("1_ofq52")
+region = Rect2(312, 0, 78, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sq4mf"]
+atlas = ExtResource("1_ofq52")
+region = Rect2(390, 0, 78, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_elnto"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfick")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uuror")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysfll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hs1ta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijys6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sq4mf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ir7i6"]
+radius = 23.0
+height = 144.0
+
+[node name="FloatingRock" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_elnto")
+autoplay = "default"
+frame_progress = 0.649453
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 20)
+shape = SubResource("CapsuleShape2D_ir7i6")

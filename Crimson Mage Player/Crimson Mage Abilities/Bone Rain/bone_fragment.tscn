@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://cmwn0pvaumsmu"]
+
+[ext_resource type="Script" path="res://Crimson Mage Player/Crimson Mage Abilities/Bone Rain/bone_fragment.gd" id="1_38yj2"]
+[ext_resource type="Texture2D" uid="uid://d4mpgtp7l3ke6" path="res://Crimson Mage Player/Crimson Mage Abilities/Bone Rain/RainDrop.png" id="2_ko6vn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tec2p"]
+atlas = ExtResource("2_ko6vn")
+region = Rect2(0, 0, 11, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyqx1"]
+atlas = ExtResource("2_ko6vn")
+region = Rect2(11, 0, 11, 19)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ux7m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tec2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dyqx1")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8dqgq"]
+radius = 3.5
+
+[node name="BoneFragment" type="Area2D"]
+scale = Vector2(1.2, 1.2)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_38yj2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2ux7m")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.319746
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_8dqgq")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 8.0
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

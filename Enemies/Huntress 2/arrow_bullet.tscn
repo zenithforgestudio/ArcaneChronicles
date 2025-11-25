@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://cvs4w81ie2qac"]
+
+[ext_resource type="Script" path="res://Enemies/Huntress 2/arrow_bullet.gd" id="1_asr0p"]
+[ext_resource type="Texture2D" uid="uid://dnme8700172e5" path="res://Enemies/Huntress 2/Sprites/Arrow/Move.png" id="1_hxwir"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkcv6"]
+atlas = ExtResource("1_hxwir")
+region = Rect2(0, 0, 24, 5)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_emgru"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkcv6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vn3b3"]
+size = Vector2(19, 2)
+
+[node name="ArrowBullet" type="Area2D"]
+z_index = 20
+collision_layer = 2
+script = ExtResource("1_asr0p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_emgru")
+autoplay = "default"
+frame_progress = 0.734698
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_vn3b3")
+
+[node name="ReturnToPoolTimer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="ReturnToPoolTimer" to="." method="_on_return_to_pool_timer_timeout"]

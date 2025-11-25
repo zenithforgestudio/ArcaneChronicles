@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c51xgth5tg84u"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_o5uat"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/RandomUpgrades/bullet_fire_damage_upgrade_card.gd" id="2_cqgcv"]
+[ext_resource type="Texture2D" uid="uid://c5me16uy1ac43" path="res://UI/UpgradeMenu/UpgradeCardIcons/Skull Bullet Cracked Icon.png" id="3_fiot5"]
+
+[node name="BulletFireDamageUpgradeCard" instance=ExtResource("1_o5uat")]
+script = ExtResource("2_cqgcv")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Ember
+Touch"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_fiot5")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+text = "Add fire
+damage to your
+basic attack"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cro71dwfx2sug"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_4vpqq"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/SkeletonHandsCards/skeleton_hands_upgrade_card_1.gd" id="2_4idto"]
+[ext_resource type="Texture2D" uid="uid://c0j52k3qum31c" path="res://UI/UpgradeMenu/UpgradeCardIcons/Skeleton Hands Raise Animation1.png" id="3_173sm"]
+
+[node name="SkeletonHandsUpgradeCard1" instance=ExtResource("1_4vpqq")]
+script = ExtResource("2_4idto")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Grasp of
+the Damned"
+
+[node name="BulletCounter" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="0"]
+text = "x10"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_173sm")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+text = "Skeleton hands 
+will spwn and 
+drag your enemies"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

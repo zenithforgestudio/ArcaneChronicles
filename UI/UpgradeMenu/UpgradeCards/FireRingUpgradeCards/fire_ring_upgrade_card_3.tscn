@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://s7j1iu66m2gj"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_nx486"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/FireRingUpgradeCards/fire_ring_upgrade_card_3.gd" id="2_ipn3n"]
+[ext_resource type="Texture2D" uid="uid://b0074eqywo1q2" path="res://UI/UpgradeMenu/UpgradeCardIcons/Fire Circle.png" id="3_fwco6"]
+
+[node name="FireRingUpgradeCard3" instance=ExtResource("1_nx486")]
+script = ExtResource("2_ipn3n")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Scorching
+Embrace"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_fwco6")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+text = "Further increase
+fire ring
+fire damage"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

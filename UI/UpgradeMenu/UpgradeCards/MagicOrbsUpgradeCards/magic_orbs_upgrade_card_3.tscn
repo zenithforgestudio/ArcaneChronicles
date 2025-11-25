@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc6rmhyr1nlmd"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_wmlcq"]
+[ext_resource type="Texture2D" uid="uid://doeckor0yafl5" path="res://Crimson Mage Player/Crimson Mage Abilities/Magic Orb/Magic Orb Frame2.png" id="2_hqyfl"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/MagicOrbsUpgradeCards/magic_orbs_upgrade_card_3.gd" id="2_n6ve8"]
+
+[node name="MagicOrbsUpgradeCard3" instance=ExtResource("1_wmlcq")]
+script = ExtResource("2_n6ve8")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Arcane
+Alignmet"
+
+[node name="BulletCounter" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="0"]
+text = "+1"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("2_hqyfl")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+size_flags_vertical = 3
+text = "Add 1 extra
+orbs around the 
+player"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

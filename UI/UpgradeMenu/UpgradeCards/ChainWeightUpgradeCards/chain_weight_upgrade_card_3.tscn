@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://byv27d2ara641"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_8gne2"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/ChainWeightUpgradeCards/chain_weight_upgrade_card_3.gd" id="2_aurxp"]
+[ext_resource type="Texture2D" uid="uid://dh7wyoo6inubp" path="res://UI/UpgradeMenu/UpgradeCardIcons/ChainWeight.png" id="3_2qgv6"]
+
+[node name="ChainWeightUpgradeCard3" instance=ExtResource("1_8gne2")]
+script = ExtResource("2_aurxp")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Spectral
+Shackles"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_2qgv6")
+expand_mode = 2
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+size_flags_vertical = 3
+text = "Enemies take
+longer to 
+escape chains"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

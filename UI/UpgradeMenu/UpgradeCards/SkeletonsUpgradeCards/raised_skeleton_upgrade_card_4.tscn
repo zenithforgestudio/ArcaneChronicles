@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bv4plcx64k6c4"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_pavf7"]
+[ext_resource type="Texture2D" uid="uid://cibbdwyvvy6r0" path="res://UI/UpgradeMenu/UpgradeCardIcons/attack1_1.png" id="2_pdky7"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/SkeletonsUpgradeCards/raised_skeleton_upgrade_card_4.gd" id="2_smn6d"]
+
+[node name="RaisedSkeletonUpgradeCard4" instance=ExtResource("1_pavf7")]
+script = ExtResource("2_smn6d")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Relentless
+Bones"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("2_pdky7")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+text = "Increase
+skeleton
+damage"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

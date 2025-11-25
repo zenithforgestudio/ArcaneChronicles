@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsk41ujpjni5i"]
+
+[ext_resource type="Script" path="res://Color Converter/hex_to_rgb_normalized_converter.gd" id="1_e4dhf"]
+
+[node name="HEXtoRGBNormalizedConverter" type="Node2D"]
+script = ExtResource("1_e4dhf")

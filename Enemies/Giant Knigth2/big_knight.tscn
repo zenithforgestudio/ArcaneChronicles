@@ -1,0 +1,83 @@
+[gd_scene load_steps=12 format=3 uid="uid://ke2vhjddce0m"]
+
+[ext_resource type="Texture2D" uid="uid://cqdlxlagu2jjj" path="res://Enemies/Giant Knigth2/hooded knight idle.png" id="1_kksnp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljlmu"]
+atlas = ExtResource("1_kksnp")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55rah"]
+atlas = ExtResource("1_kksnp")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqwom"]
+atlas = ExtResource("1_kksnp")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_suvj4"]
+atlas = ExtResource("1_kksnp")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gk2hi"]
+atlas = ExtResource("1_kksnp")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjl17"]
+atlas = ExtResource("1_kksnp")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ly7x"]
+atlas = ExtResource("1_kksnp")
+region = Rect2(600, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0n37n"]
+atlas = ExtResource("1_kksnp")
+region = Rect2(700, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_avfqa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljlmu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55rah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqwom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_suvj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gk2hi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjl17")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ly7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0n37n")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gisoq"]
+height = 44.0
+
+[node name="BigKnight" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_avfqa")
+animation = &"Idle"
+frame_progress = 0.294679
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-10, -1)
+shape = SubResource("CapsuleShape2D_gisoq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

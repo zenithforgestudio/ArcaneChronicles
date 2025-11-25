@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbexmd7whlmat"
+path="res://.godot/imported/Ominous Music by stuntstudio -- https_freesound.org_s_796543 -- License Attribution 4.0.mp3-3215b2fa23551a57e987c3544712c1ee.mp3str"
+
+[deps]
+
+source_file="res://Sounds/PlayerDeathSounds/Ominous Music by stuntstudio -- https_freesound.org_s_796543 -- License Attribution 4.0.mp3"
+dest_files=["res://.godot/imported/Ominous Music by stuntstudio -- https_freesound.org_s_796543 -- License Attribution 4.0.mp3-3215b2fa23551a57e987c3544712c1ee.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

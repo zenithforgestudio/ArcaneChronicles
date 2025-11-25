@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://5of2q0p5v6uj"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_pyxb0"]
+[ext_resource type="Texture2D" uid="uid://b5tlroold7ecs" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire12.png" id="2_7cje4"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/HomingFlameUpgradeCards/homing_flame_upgrade_card_2.gd" id="2_l8cit"]
+
+[node name="HomingFlameUpgradeCard2" instance=ExtResource("1_pyxb0")]
+script = ExtResource("2_l8cit")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Burning
+Verdict"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("2_7cje4")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+text = "Increase 
+flame 
+damage"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

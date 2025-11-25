@@ -1,0 +1,106 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0qc62527invl"]
+
+[ext_resource type="Script" uid="uid://bhgojrshmon0d" path="res://Pixel Environment/cage.gd" id="1_fika5"]
+[ext_resource type="Texture2D" uid="uid://gls0pln4ngr1" path="res://icon.svg" id="2_yce2v"]
+
+[sub_resource type="Animation" id="Animation_bkca3"]
+resource_name = "FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_18sxi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6fdou"]
+_data = {
+&"FadeOut": SubResource("Animation_bkca3"),
+&"RESET": SubResource("Animation_18sxi")
+}
+
+[node name="Cage" type="Node2D" groups=["Cage"]]
+script = ExtResource("1_fika5")
+
+[node name="TopLeft" type="Marker2D" parent="."]
+position = Vector2(90, 75)
+
+[node name="Sprite2D" type="Sprite2D" parent="TopLeft"]
+visible = false
+texture = ExtResource("2_yce2v")
+
+[node name="BottomLeft" type="Marker2D" parent="."]
+position = Vector2(90, 400)
+
+[node name="Sprite2D" type="Sprite2D" parent="BottomLeft"]
+visible = false
+texture = ExtResource("2_yce2v")
+
+[node name="TopRight" type="Marker2D" parent="."]
+position = Vector2(640, 75)
+
+[node name="Sprite2D" type="Sprite2D" parent="TopRight"]
+visible = false
+texture = ExtResource("2_yce2v")
+
+[node name="BottomRight" type="Marker2D" parent="."]
+position = Vector2(640, 400)
+
+[node name="Sprite2D" type="Sprite2D" parent="BottomRight"]
+visible = false
+texture = ExtResource("2_yce2v")
+
+[node name="SpawnSwordmanTimer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[node name="SpawnArcherTimer" type="Timer" parent="."]
+wait_time = 7.5
+autostart = true
+
+[node name="SpawnKnightTimer" type="Timer" parent="."]
+wait_time = 7.5
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_6fdou")
+}
+
+[connection signal="timeout" from="SpawnSwordmanTimer" to="." method="_on_spawn_swordman_timer_timeout"]
+[connection signal="timeout" from="SpawnArcherTimer" to="." method="_on_spawn_archer_timer_timeout"]
+[connection signal="timeout" from="SpawnKnightTimer" to="." method="_on_spawn_knight_timer_timeout"]

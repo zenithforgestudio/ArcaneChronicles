@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://duhnr3hv0cp68"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_oigii"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/FamiliarUpgradeCards/familiar_upgrade_card_4.gd" id="2_tghvq"]
+[ext_resource type="Texture2D" uid="uid://bhtt5qd72qfnc" path="res://UI/UpgradeMenu/UpgradeCardIcons/eye monster idle.png" id="3_27ski"]
+
+[node name="FamiliarUpgradeCard4" instance=ExtResource("1_oigii")]
+script = ExtResource("2_tghvq")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Crypt
+Grafter"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_27ski")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+text = "The second
+familiar also
+spawns tombstones"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

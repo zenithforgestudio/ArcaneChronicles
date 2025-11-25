@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://wn6mnom3ok66"]
+
+[ext_resource type="Script" path="res://Crimson Mage Player/Crimson Mage Abilities/Bone Rain/bone_rain.gd" id="1_tjkij"]
+
+[node name="BoneRain" type="Node2D"]
+script = ExtResource("1_tjkij")

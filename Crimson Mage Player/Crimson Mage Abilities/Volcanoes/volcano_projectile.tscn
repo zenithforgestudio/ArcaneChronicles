@@ -1,0 +1,120 @@
+[gd_scene load_steps=17 format=3 uid="uid://bd0naxohg6i1q"]
+
+[ext_resource type="Script" path="res://Crimson Mage Player/Crimson Mage Abilities/Volcanoes/volcano_projectile.gd" id="1_2rm8v"]
+[ext_resource type="Texture2D" uid="uid://8gdomkfgiodn" path="res://Crimson Mage Player/Crimson Mage Abilities/Volcanoes/Projectiles/FB000.png" id="2_j6owo"]
+[ext_resource type="Texture2D" uid="uid://cx728pp2lba0k" path="res://Crimson Mage Player/Crimson Mage Abilities/Volcanoes/Projectiles/Lava Projectile1.png" id="2_y4cug"]
+[ext_resource type="Texture2D" uid="uid://ynm7cxr5yasw" path="res://Crimson Mage Player/Crimson Mage Abilities/Volcanoes/Projectiles/FB000 - Copy.png" id="3_rsclx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_adhkj"]
+radius = 8.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfryh"]
+atlas = ExtResource("2_j6owo")
+region = Rect2(20, 0, 41, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ij66n"]
+atlas = ExtResource("2_j6owo")
+region = Rect2(84, 0, 41, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6xb88"]
+atlas = ExtResource("2_j6owo")
+region = Rect2(148, 0, 41, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aogsg"]
+atlas = ExtResource("2_j6owo")
+region = Rect2(212, 0, 41, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vk657"]
+atlas = ExtResource("2_j6owo")
+region = Rect2(276, 0, 41, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6122g"]
+atlas = ExtResource("3_rsclx")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3sw5"]
+atlas = ExtResource("3_rsclx")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1xtr"]
+atlas = ExtResource("3_rsclx")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j55nq"]
+atlas = ExtResource("3_rsclx")
+region = Rect2(96, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8h20"]
+atlas = ExtResource("3_rsclx")
+region = Rect2(128, 0, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1h25e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_y4cug")
+}],
+"loop": true,
+"name": &"Lava Ball",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfryh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ij66n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6xb88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aogsg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vk657")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6122g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3sw5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1xtr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j55nq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8h20")
+}],
+"loop": false,
+"name": &"mini_default",
+"speed": 5.0
+}]
+
+[node name="VolcanoProjectile" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_2rm8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_adhkj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = -1.5708
+sprite_frames = SubResource("SpriteFrames_1h25e")
+animation = &"Lava Ball"
+
+[node name="CollisionTimer" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="CollisionTimer" to="." method="_on_collision_timer_timeout"]

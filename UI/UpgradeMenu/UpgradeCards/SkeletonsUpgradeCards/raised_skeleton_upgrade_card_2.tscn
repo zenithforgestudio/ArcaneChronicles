@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3a8f2j64jd1"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_dcntn"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/SkeletonsUpgradeCards/raised_skeleton_upgrade_card_2.gd" id="2_qx44m"]
+[ext_resource type="Texture2D" uid="uid://cibbdwyvvy6r0" path="res://UI/UpgradeMenu/UpgradeCardIcons/attack1_1.png" id="3_741nx"]
+
+[node name="RaisedSkeletonUpgradeCard2" instance=ExtResource("1_dcntn")]
+script = ExtResource("2_qx44m")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Unholy
+Harvest"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_741nx")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+text = "Increase the 
+chance to spawn a
+skeleton on death"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

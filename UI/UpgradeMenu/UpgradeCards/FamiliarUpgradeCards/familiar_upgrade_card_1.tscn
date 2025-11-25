@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgv1sarjsx31r"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_8tscf"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/FamiliarUpgradeCards/familiar_upgrade_card_1.gd" id="2_06gef"]
+[ext_resource type="Texture2D" uid="uid://bl6rsrcmmghqr" path="res://UI/UpgradeMenu/UpgradeCardIcons/Bat.png" id="3_u201y"]
+
+[node name="FamiliarUpgradeCard1" instance=ExtResource("1_8tscf")]
+script = ExtResource("2_06gef")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Deathwing
+Pet"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_u201y")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+text = "Spawn a
+familiar that
+kills enemies"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

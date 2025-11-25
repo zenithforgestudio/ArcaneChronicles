@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=3 uid="uid://gyfsqh7ff14d"]
+
+[ext_resource type="FontFile" uid="uid://xg0q0xdhjpgd" path="res://Fonts/antiquity-print.ttf" id="1_eluvq"]
+[ext_resource type="PackedScene" uid="uid://6fd1qnkkuth2" path="res://UI/Buttons/texture_button.tscn" id="2_73ytq"]
+[ext_resource type="Texture2D" uid="uid://d07823nfawq3r" path="res://UI/Buttons/LobbyButton/Button Normal.png" id="3_1posq"]
+[ext_resource type="Texture2D" uid="uid://c0cwfxq8dnpmh" path="res://UI/Buttons/LobbyButton/Button Pressed.png" id="4_clveb"]
+[ext_resource type="Texture2D" uid="uid://dknyhv6qowawp" path="res://UI/Buttons/LobbyButton/Button Pressed - Copy.png" id="5_c0dov"]
+
+[node name="MarginContainer" type="MarginContainer"]
+custom_minimum_size = Vector2(140, 0)
+offset_right = 150.0
+offset_bottom = 220.0
+
+[node name="UpgradeCard" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(140, 220)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UpgradeCard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="UpgradeCard/VBoxContainer"]
+layout_mode = 2
+
+[node name="UpgradeTitle" type="Label" parent="UpgradeCard/VBoxContainer"]
+self_modulate = Color(0.0745098, 0.00784314, 0.0313726, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_eluvq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UpgradeCard/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="BulletCounter" type="Label" parent="UpgradeCard/VBoxContainer/HBoxContainer"]
+self_modulate = Color(0.0745098, 0.00784314, 0.0313726, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_eluvq")
+
+[node name="TextureRect" type="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="UpgradeCard/VBoxContainer"]
+layout_mode = 2
+
+[node name="Description" type="Label" parent="UpgradeCard/VBoxContainer"]
+self_modulate = Color(0.0745098, 0.00784314, 0.0313726, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_eluvq")
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control3" type="Control" parent="UpgradeCard/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" parent="UpgradeCard/VBoxContainer" instance=ExtResource("2_73ytq")]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("3_1posq")
+texture_pressed = ExtResource("4_clveb")
+texture_disabled = ExtResource("5_c0dov")
+
+[node name="Label" type="Label" parent="UpgradeCard/VBoxContainer/TextureButton"]
+self_modulate = Color(0.0745098, 0.00784314, 0.0313726, 1)
+layout_mode = 0
+offset_left = 15.0
+offset_top = 10.0
+offset_right = 81.0
+offset_bottom = 34.0
+theme_override_fonts/font = ExtResource("1_eluvq")
+text = "Select"

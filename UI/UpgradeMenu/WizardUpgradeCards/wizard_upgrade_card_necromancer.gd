@@ -1,0 +1,24 @@
+extends MarginContainer
+
+var root
+var upgrade_menu
+var wizard
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	await get_tree().process_frame
+	wizard = get_tree().get_first_node_in_group("WizardNPC")
+	root = get_tree().current_scene
+	upgrade_menu = get_tree().get_first_node_in_group("UpgradeMenu")
+
+
+func _on_texture_button_pressed() -> void:
+	root.skeleton_hands_count += 5
+	root.bonus_skull_damage += 50
+	root.familiar1_spawn_timer -= 1.0
+	root.familiar2_spawn_timer -= 1.0
+	root.enable_upgrade_button(14, 2)
+	upgrade_menu.close()
+	upgrade_menu.wizzard_upgrades.erase(self)
+	wizard.collision_shape_2d.disabled = true
+	wizard.animation_player.play("FadeOut")
+	queue_free()

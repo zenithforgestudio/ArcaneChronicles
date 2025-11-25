@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://fpg5eaec2jk2"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_qyf1m"]
+
+[node name="EmptyUpgradeCard" instance=ExtResource("1_qyf1m")]
+
+[node name="TextureButton" parent="UpgradeCard/VBoxContainer" index="6"]
+modulate = Color(1, 1, 1, 0.039215688)

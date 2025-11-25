@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqqnft1nynutv"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_xluwy"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/AcidRainUpgradeCards/acid_rain_upgrade_card_1.gd" id="2_ywusd"]
+[ext_resource type="Texture2D" uid="uid://ddc30w3xbtioy" path="res://UI/UpgradeMenu/UpgradeCardIcons/RainDrop.png" id="3_762uh"]
+
+[node name="AcidRainUpgradeCard1" instance=ExtResource("1_xluwy")]
+script = ExtResource("2_ywusd")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Bllight
+Fall"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_762uh")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+size_flags_vertical = 3
+text = "Acid rain will
+start to fall
+from the sky"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

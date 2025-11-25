@@ -1,0 +1,103 @@
+[gd_scene load_steps=15 format=3 uid="uid://bimhij6khfb0s"]
+
+[ext_resource type="PackedScene" uid="uid://evgir8eytp7w" path="res://base_bullet.tscn" id="1_xusev"]
+[ext_resource type="Script" path="res://Crimson Mage Player/Skull Bullet/skull_bullet.gd" id="2_mag2h"]
+[ext_resource type="Texture2D" uid="uid://btqgqitgu7soy" path="res://Crimson Mage Player/Skull.png" id="3_ri4j5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgc7y"]
+atlas = ExtResource("3_ri4j5")
+region = Rect2(0, 0, 12, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cy864"]
+atlas = ExtResource("3_ri4j5")
+region = Rect2(12, 0, 12, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m40ou"]
+atlas = ExtResource("3_ri4j5")
+region = Rect2(24, 0, 12, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uywgm"]
+atlas = ExtResource("3_ri4j5")
+region = Rect2(36, 0, 12, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1cha"]
+atlas = ExtResource("3_ri4j5")
+region = Rect2(48, 0, 12, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjg71"]
+atlas = ExtResource("3_ri4j5")
+region = Rect2(60, 0, 12, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5d11q"]
+atlas = ExtResource("3_ri4j5")
+region = Rect2(72, 0, 12, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgr1s"]
+atlas = ExtResource("3_ri4j5")
+region = Rect2(84, 0, 12, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_70wde"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgc7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cy864")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m40ou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uywgm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1cha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjg71")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5d11q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgr1s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i0qnu"]
+radius = 11.0454
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bmy2o"]
+size = Vector2(1400, 700)
+
+[node name="SkullBullet" groups=["Bullet"] instance=ExtResource("1_xusev")]
+z_index = 100
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_mag2h")
+speed = 300
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+texture_filter = 1
+scale = Vector2(1.4, 1.4)
+sprite_frames = SubResource("SpriteFrames_70wde")
+autoplay = "default"
+frame_progress = 0.46671
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_i0qnu")
+
+[node name="EnemyDetectionArea" type="Area2D" parent="." index="2"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetectionArea" index="0"]
+visible = false
+shape = SubResource("RectangleShape2D_bmy2o")
+debug_color = Color(0.782483, 0.376245, 0.576773, 0.42)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

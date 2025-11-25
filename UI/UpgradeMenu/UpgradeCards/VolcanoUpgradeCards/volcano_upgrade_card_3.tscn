@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dej31ova351g7"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_4dtsj"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/VolcanoUpgradeCards/volcano_upgrade_card_3.gd" id="2_yjiir"]
+[ext_resource type="Texture2D" uid="uid://cx728pp2lba0k" path="res://Crimson Mage Player/Crimson Mage Abilities/Volcanoes/Projectiles/Lava Projectile1.png" id="3_v0u8l"]
+
+[node name="VolcanoUpgradeCard3" instance=ExtResource("1_4dtsj")]
+script = ExtResource("2_yjiir")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Lava
+Barrage"
+
+[node name="BulletCounter" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="0"]
+text = "+10"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_v0u8l")
+expand_mode = 2
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+text = "Volcanoes
+shoot more
+projectiles"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dc874iujqnkb4"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_h5mxc"]
+[ext_resource type="Texture2D" uid="uid://c6i1m2ffmjfhb" path="res://UI/UpgradeMenu/UpgradeCards/Skull Bullet Icon.png" id="2_ch5l5"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/SkullBulletUpgradeCards/skull_bullet_upgrade_card_1.gd" id="2_vit3a"]
+
+[node name="SkullBulletUpgradeCard1" instance=ExtResource("1_h5mxc")]
+script = ExtResource("2_vit3a")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Echoing
+Shot"
+
+[node name="BulletCounter" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="0"]
+text = "+1"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("2_ch5l5")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+size_flags_vertical = 3
+text = "Add another 
+skull to your
+basic attack"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

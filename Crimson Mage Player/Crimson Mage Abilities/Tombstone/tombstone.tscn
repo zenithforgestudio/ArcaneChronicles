@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=3 uid="uid://bvjb4wnsxblis"]
+
+[ext_resource type="Script" path="res://Crimson Mage Player/Crimson Mage Abilities/Tombstone/tombstone.gd" id="1_h50kx"]
+[ext_resource type="Texture2D" uid="uid://bx8qwiugx2q1a" path="res://UI/ScrollMenuIcons/RandomUpgrades/TombStoneLeft_no_border.png" id="2_k4sjp"]
+[ext_resource type="Texture2D" uid="uid://cq6y3nhi4j6gq" path="res://Crimson Mage Player/Crimson Mage Abilities/TombStones/TombStoneRight.png" id="2_rvu63"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8g2da"]
+radius = 19.2354
+
+[sub_resource type="Animation" id="Animation_if4te"]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fn4ih"]
+resource_name = "FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jie0i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x7kw8"]
+_data = {
+"FadeIn": SubResource("Animation_if4te"),
+"FadeOut": SubResource("Animation_fn4ih"),
+"RESET": SubResource("Animation_jie0i")
+}
+
+[node name="Tobmstone" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_h50kx")
+
+[node name="Left" type="Sprite2D" parent="."]
+texture = ExtResource("2_k4sjp")
+
+[node name="Rigth" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_rvu63")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8g2da")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_x7kw8")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

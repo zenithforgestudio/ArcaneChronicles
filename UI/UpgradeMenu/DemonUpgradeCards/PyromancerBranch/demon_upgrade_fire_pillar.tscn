@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://csqcqr4ef2d0w"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_534tr"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/DemonUpgradeCards/PyromancerBranch/demon_upgrade_fire_pillar.gd" id="2_88uir"]
+[ext_resource type="Texture2D" uid="uid://bsq2wxvc82dcs" path="res://UI/UpgradeMenu/UpgradeCardIcons/Fire Pillar.png" id="2_wb6jh"]
+
+[node name="DemonUpgradeFirePillar" instance=ExtResource("1_534tr")]
+script = ExtResource("2_88uir")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Guided
+Inferno"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("2_wb6jh")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+text = "Fire pillars
+move towards
+closest enemy"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

@@ -1,0 +1,83 @@
+[gd_scene load_steps=10 format=3 uid="uid://ljug70uc1dg2"]
+
+[ext_resource type="Texture2D" uid="uid://qhheg0wqhk11" path="res://Crimson Palette/Collectibles/Heart Round - Copy (2).png" id="1_raryk"]
+[ext_resource type="Script" path="res://UI/heart_point.gd" id="2_cl7pf"]
+[ext_resource type="Texture2D" uid="uid://do2aqsbvcfhsj" path="res://Crimson Palette/Collectibles/HeartDeathAnimation/Heart Death Animation - Frame1.png" id="3_oy5a3"]
+[ext_resource type="Texture2D" uid="uid://crutplvtuj6ie" path="res://Crimson Palette/Collectibles/HeartDeathAnimation/Heart Death Animation - Frame2.png" id="4_1g6lc"]
+[ext_resource type="Texture2D" uid="uid://bcedc3re6knag" path="res://Crimson Palette/Collectibles/HeartDeathAnimation/Heart Death Animation - Frame4.png" id="5_46kch"]
+
+[sub_resource type="Animation" id="Animation_2fkt8"]
+resource_name = "Brake_Heart"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0625, 0.125, 0.1875, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_raryk"), ExtResource("1_raryk"), ExtResource("3_oy5a3"), ExtResource("4_1g6lc"), ExtResource("5_46kch")]
+}
+
+[sub_resource type="Animation" id="Animation_rsrt3"]
+resource_name = "Fade_Out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mw24d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_raryk")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4u56l"]
+_data = {
+"Brake_Heart": SubResource("Animation_2fkt8"),
+"Fade_Out": SubResource("Animation_rsrt3"),
+"RESET": SubResource("Animation_mw24d")
+}
+
+[node name="HeartPoint" type="TextureRect"]
+texture = ExtResource("1_raryk")
+stretch_mode = 2
+script = ExtResource("2_cl7pf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4u56l")
+}

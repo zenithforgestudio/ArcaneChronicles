@@ -1,0 +1,119 @@
+[gd_scene load_steps=13 format=3 uid="uid://pxkmtwpeygra"]
+
+[ext_resource type="Script" path="res://Crimson Mage Player/Crimson Mage Abilities/Volcanoes/volcano.gd" id="1_57kkv"]
+[ext_resource type="Texture2D" uid="uid://bsjcoj6tgvxp0" path="res://Crimson Mage Player/Crimson Mage Abilities/Volcanoes/_c4c802ac-6952-4315-a896-ff5d3366b07b-removebg-preview-Sheet.png" id="1_y7e4f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ous5l"]
+atlas = ExtResource("1_y7e4f")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ciml"]
+atlas = ExtResource("1_y7e4f")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ft3pd"]
+atlas = ExtResource("1_y7e4f")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmjfy"]
+atlas = ExtResource("1_y7e4f")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eniws"]
+atlas = ExtResource("1_y7e4f")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_umsdu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ous5l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ciml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ft3pd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmjfy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eniws")
+}],
+"loop": false,
+"name": &"Shoot",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_atmie"]
+resource_name = "FadeOut"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hcwhe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_imlm2"]
+_data = {
+"FadeOut": SubResource("Animation_atmie"),
+"RESET": SubResource("Animation_hcwhe")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uni43"]
+radius = 18.0
+height = 54.0
+
+[node name="Volcano" type="Node2D"]
+script = ExtResource("1_57kkv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_umsdu")
+animation = &"Shoot"
+frame = 4
+frame_progress = 0.383408
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(4, -6)
+
+[node name="ShootProjectileTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_imlm2")
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(4, 17)
+shape = SubResource("CapsuleShape2D_uni43")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

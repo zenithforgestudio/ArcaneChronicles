@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0g00aqfq6m05"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_o72hn"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/SkullBulletUpgradeCards/skull_bullet_upgrade_card_3.gd" id="2_87itn"]
+[ext_resource type="Texture2D" uid="uid://c6i1m2ffmjfhb" path="res://UI/UpgradeMenu/UpgradeCards/Skull Bullet Icon.png" id="3_y2vb1"]
+
+[node name="SkullBulletUpgradeCard3" instance=ExtResource("1_o72hn")]
+script = ExtResource("2_87itn")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Skull 
+Burst"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_y2vb1")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+size_flags_vertical = 6
+text = "Double 
+skull
+damage"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

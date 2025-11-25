@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://bb2ges126jgnd"]
+
+[ext_resource type="Script" path="res://Crimson Mage Player/Crimson Mage Abilities/SkeletonWalls/skeleton_wall.gd" id="1_56wuc"]
+[ext_resource type="Texture2D" uid="uid://coands4gu1oc0" path="res://Crimson Mage Player/Crimson Mage Abilities/SkeletonWalls/BoneWall front perspective.png" id="2_uxh66"]
+
+[sub_resource type="Animation" id="Animation_tlx4y"]
+resource_name = "FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hcj8n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lesxs"]
+_data = {
+"FadeOut": SubResource("Animation_tlx4y"),
+"RESET": SubResource("Animation_hcj8n")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ubx7i"]
+
+[node name="SkeletonWall" type="Node2D"]
+script = ExtResource("1_56wuc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_uxh66")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lesxs")
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(7.68, 4.08)
+shape = SubResource("RectangleShape2D_ubx7i")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

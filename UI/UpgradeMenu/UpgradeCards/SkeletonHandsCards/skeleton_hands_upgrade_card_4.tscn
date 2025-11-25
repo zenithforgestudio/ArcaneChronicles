@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddaf4c855q3s4"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_qkmvr"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/SkeletonHandsCards/skeleton_hands_upgrade_card_4.gd" id="2_hb3pv"]
+[ext_resource type="Texture2D" uid="uid://c0j52k3qum31c" path="res://UI/UpgradeMenu/UpgradeCardIcons/Skeleton Hands Raise Animation1.png" id="3_25efx"]
+
+[node name="SkeletonHandsUpgradeCard4" instance=ExtResource("1_qkmvr")]
+script = ExtResource("2_hb3pv")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Tormenting
+Death"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_25efx")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+text = "After dragging the
+enemy, It will
+spawn a skeleton"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

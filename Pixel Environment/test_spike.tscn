@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmjkfo2pto86y"]
+
+[ext_resource type="Texture2D" uid="uid://gls0pln4ngr1" path="res://icon.svg" id="1_f2asd"]
+[ext_resource type="Script" path="res://Pixel Environment/test_spike.gd" id="1_h84yl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_82vah"]
+radius = 55.0869
+height = 139.921
+
+[node name="TestSpike" type="Area2D"]
+scale = Vector2(0.5, 0.5)
+collision_layer = 2
+script = ExtResource("1_h84yl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 0.796879
+texture = ExtResource("1_f2asd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -9)
+rotation = 0.0156026
+shape = SubResource("CapsuleShape2D_82vah")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

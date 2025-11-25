@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://b250vimg065j7"
+path="res://.godot/imported/_1e8524f8-edce-4e2f-989b-e970ee712a19-removebg-preview.png-24bff2edf00c472d62fdfb1bbbed1b2f.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Crimson Mage Player/Crimson Mage Abilities/Volcanoes/Projectiles/AI Projectiles/_1e8524f8-edce-4e2f-989b-e970ee712a19-removebg-preview.png"
+dest_files=["res://.godot/imported/_1e8524f8-edce-4e2f-989b-e970ee712a19-removebg-preview.png-24bff2edf00c472d62fdfb1bbbed1b2f.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

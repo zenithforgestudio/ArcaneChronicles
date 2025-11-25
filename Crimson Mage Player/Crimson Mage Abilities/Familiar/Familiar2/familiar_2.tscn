@@ -1,0 +1,95 @@
+[gd_scene load_steps=13 format=3 uid="uid://0s16pyoxrwr5"]
+
+[ext_resource type="Script" path="res://Crimson Mage Player/Crimson Mage Abilities/Familiar/Familiar2/familiar_2.gd" id="1_ivqjd"]
+[ext_resource type="Texture2D" uid="uid://box0d0cqu22vb" path="res://Crimson Mage Player/Crimson Mage Abilities/Familiar/Familiar2/eye monster idle.png" id="2_i6t6g"]
+[ext_resource type="Texture2D" uid="uid://br1fvjqawf0tv" path="res://Crimson Mage Player/Crimson Mage Abilities/Familiar/Familiar2/eye monster idle - Copy.png" id="3_8xwt5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3yqy"]
+atlas = ExtResource("2_i6t6g")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7rql"]
+atlas = ExtResource("2_i6t6g")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6qf0"]
+atlas = ExtResource("2_i6t6g")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w41ks"]
+atlas = ExtResource("2_i6t6g")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6210"]
+atlas = ExtResource("3_8xwt5")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30474"]
+atlas = ExtResource("3_8xwt5")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbouw"]
+atlas = ExtResource("3_8xwt5")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ccpr"]
+atlas = ExtResource("3_8xwt5")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6j33a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3yqy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7rql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6qf0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w41ks")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6210")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30474")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbouw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ccpr")
+}],
+"loop": true,
+"name": &"default_1",
+"speed": 10.0
+}]
+
+[node name="Familiar2" type="Node2D"]
+visible = false
+position = Vector2(36, -26)
+script = ExtResource("1_ivqjd")
+
+[node name="Familiar2AnimatedSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, -2)
+sprite_frames = SubResource("SpriteFrames_6j33a")
+animation = &"default_1"
+autoplay = "default_1"
+frame = 3
+frame_progress = 0.483939
+flip_h = true
+
+[node name="SpawnSkeletonTombstoneTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="SpawnSkeletonTombstoneTimer" to="." method="_on_spawn_skeleton_tombstone_timer_timeout"]

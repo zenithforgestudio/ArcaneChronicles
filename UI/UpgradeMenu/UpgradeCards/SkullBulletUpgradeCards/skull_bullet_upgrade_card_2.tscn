@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyqefnr8uk338"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_dxgcr"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/SkullBulletUpgradeCards/skull_bullet_upgrade_card_2.gd" id="2_hqe1h"]
+[ext_resource type="Texture2D" uid="uid://c6i1m2ffmjfhb" path="res://UI/UpgradeMenu/UpgradeCards/Skull Bullet Icon.png" id="3_rtg8s"]
+
+[node name="SkullBulletUpgradeCard2" instance=ExtResource("1_dxgcr")]
+script = ExtResource("2_hqe1h")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Volley of the 
+Damned
+"
+
+[node name="BulletCounter" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="0"]
+text = "+2"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_rtg8s")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+size_flags_vertical = 3
+text = "Add 2 more 
+skulls to your
+basic attack"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c1beuwl5eny8r"
+path="res://.godot/imported/Fire Trance_70 BPM_Loop.wav-49137d9ee273abdcd64f84bb1bdf4e01.sample"
+
+[deps]
+
+source_file="res://Audio/Fire Trance/Fire Trance_70 BPM_Loop.wav"
+dest_files=["res://.godot/imported/Fire Trance_70 BPM_Loop.wav-49137d9ee273abdcd64f84bb1bdf4e01.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

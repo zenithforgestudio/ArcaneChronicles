@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cakvu6tgif432"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_0equj"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/MagicOrbsUpgradeCards/magic_orbs_upgrade_card_4.gd" id="2_47mvo"]
+[ext_resource type="Texture2D" uid="uid://doeckor0yafl5" path="res://Crimson Mage Player/Crimson Mage Abilities/Magic Orb/Magic Orb Frame2.png" id="3_j82o2"]
+
+[node name="MagicOrbsUpgradeCard4" instance=ExtResource("1_0equj")]
+script = ExtResource("2_47mvo")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Rune
+Blast"
+
+[node name="BulletCounter" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="0"]
+text = "+1"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_j82o2")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+size_flags_vertical = 3
+text = "Increase Knock 
+Force And Add 
+Another Orb
+"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://by5cchn77isxc"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_luh28"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/ChainWeightUpgradeCards/chain_weight_upgrade_card_2.gd" id="2_y2pqx"]
+[ext_resource type="Texture2D" uid="uid://dh7wyoo6inubp" path="res://UI/UpgradeMenu/UpgradeCardIcons/ChainWeight.png" id="3_0usqx"]
+
+[node name="ChainWeightUpgradeCard2" instance=ExtResource("1_luh28")]
+script = ExtResource("2_y2pqx")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Chains of
+Torment"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_0usqx")
+expand_mode = 2
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+size_flags_vertical = 3
+text = "Chained enemies
+take more
+damage"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

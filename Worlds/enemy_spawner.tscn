@@ -1,0 +1,115 @@
+[gd_scene load_steps=3 format=3 uid="uid://xel85bgw4oh6"]
+
+[ext_resource type="Script" path="res://Worlds/enemy_spawner.gd" id="1_nwqwd"]
+
+[sub_resource type="Curve2D" id="Curve2D_n5udk"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -185.869, -219.006, 0, 0, 0, 0, 777.143, -220.168, 0, 0, 0, 0, 957, -220, 0, 0, 0, 0, 966, 548, 0, 0, 0, 0, -185, 550, 0, 0, 0, 0, -185, -223.974, 0, 0, 0, 0, -185.869, -219.006)
+}
+point_count = 7
+
+[node name="EnemySpawner" type="Node2D" groups=["Spawner"]]
+script = ExtResource("1_nwqwd")
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(-285, -98)
+scale = Vector2(0.7, 0.595)
+curve = SubResource("Curve2D_n5udk")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-185.869, -219.006)
+rotation = -0.00120663
+
+[node name="SwordmanSpawnTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+autostart = true
+
+[node name="SpawnRangerTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="SpawnBigKnightTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="SpawnSquadTimer1" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="SpawnSquadTimer2" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
+
+[node name="SpawnSquadTimer3" type="Timer" parent="."]
+wait_time = 30.0
+one_shot = true
+
+[node name="TestTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="FirePillarsSpawnTimer" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
+autostart = true
+
+[node name="SpawnVolcanoTimer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+autostart = true
+
+[node name="SpawnSkeletonHandsTimer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+autostart = true
+
+[node name="BoneWallTimer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="SpawnNPCTimer" type="Timer" parent="."]
+wait_time = 90.0
+one_shot = true
+autostart = true
+
+[node name="BossTimer" type="Timer" parent="."]
+wait_time = 210.0
+one_shot = true
+autostart = true
+
+[node name="BossTimer2" type="Timer" parent="."]
+wait_time = 380.0
+one_shot = true
+
+[node name="SpawnDemonTimer1" type="Timer" parent="."]
+wait_time = 300.0
+one_shot = true
+autostart = true
+
+[node name="SpawnDemonTimer2" type="Timer" parent="."]
+wait_time = 350.0
+one_shot = true
+autostart = true
+
+[node name="SpawnMonolythTimer" type="Timer" parent="."]
+wait_time = 30.0
+
+[connection signal="timeout" from="SwordmanSpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="SpawnRangerTimer" to="." method="_on_spawn_ranger_timer_timeout"]
+[connection signal="timeout" from="SpawnBigKnightTimer" to="." method="_on_spawn_big_knight_timer_timeout"]
+[connection signal="timeout" from="SpawnSquadTimer1" to="." method="_on_spawn_squad_timer_timeout"]
+[connection signal="timeout" from="SpawnSquadTimer2" to="." method="_on_spawn_squad_timer_2_timeout"]
+[connection signal="timeout" from="SpawnSquadTimer3" to="." method="_on_spawn_squad_timer_3_timeout"]
+[connection signal="timeout" from="TestTimer" to="." method="_on_test_timer_timeout"]
+[connection signal="timeout" from="FirePillarsSpawnTimer" to="." method="_on_fire_pillars_spawn_timer_timeout"]
+[connection signal="timeout" from="SpawnVolcanoTimer" to="." method="_on_spawn_volcano_timer_timeout"]
+[connection signal="timeout" from="SpawnSkeletonHandsTimer" to="." method="_on_spawn_skeleton_hands_timer_timeout"]
+[connection signal="timeout" from="BoneWallTimer" to="." method="_on_bone_wall_timer_timeout"]
+[connection signal="timeout" from="SpawnNPCTimer" to="." method="_on_spawn_npc_timer_timeout"]
+[connection signal="timeout" from="BossTimer" to="." method="_on_boss_timer_timeout"]
+[connection signal="timeout" from="BossTimer2" to="." method="_on_boss_timer_2_timeout"]
+[connection signal="timeout" from="SpawnDemonTimer1" to="." method="_on_spawn_demon_timer_1_timeout"]
+[connection signal="timeout" from="SpawnDemonTimer2" to="." method="_on_spawn_demon_timer_2_timeout"]
+[connection signal="timeout" from="SpawnMonolythTimer" to="." method="_on_spawn_monolyth_timer_timeout"]

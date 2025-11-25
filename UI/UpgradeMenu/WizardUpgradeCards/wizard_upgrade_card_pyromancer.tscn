@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://58ls2hd1vii7"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_6eigc"]
+[ext_resource type="Texture2D" uid="uid://b5tlroold7ecs" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire12.png" id="2_cjyno"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/WizardUpgradeCards/wizard_upgrade_card_pyromancer.gd" id="2_ipkvp"]
+
+[node name="WizardUpgradeCardPyromancer" instance=ExtResource("1_6eigc")]
+script = ExtResource("2_ipkvp")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Fire
+Upgrade"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("2_cjyno")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+text = "Increase
+the number
+of fire ticks"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

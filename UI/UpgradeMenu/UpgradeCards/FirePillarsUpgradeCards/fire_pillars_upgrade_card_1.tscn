@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://csstkb2oippk1"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_f3gml"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/FirePillarsUpgradeCards/fire_pillars_upgrade_card_1.gd" id="2_ts7a3"]
+[ext_resource type="Texture2D" uid="uid://bsq2wxvc82dcs" path="res://UI/UpgradeMenu/UpgradeCardIcons/Fire Pillar.png" id="3_tmc6r"]
+
+[node name="FirePillarsUpgradeCard1" instance=ExtResource("1_f3gml")]
+script = ExtResource("2_ts7a3")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Fire
+Pillars"
+
+[node name="BulletCounter" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="0"]
+text = "+20"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_tmc6r")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+size_flags_vertical = 3
+text = "Spawn fire 
+pillars on
+ the map"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqp5eqwod7sw0"]
+
+[ext_resource type="Script" path="res://Worlds/pool.gd" id="1_dv0xp"]
+[ext_resource type="PackedScene" uid="uid://bimhij6khfb0s" path="res://Crimson Mage Player/Skull Bullet/skull_bullet.tscn" id="2_7s633"]
+[ext_resource type="PackedScene" uid="uid://btgjhhlqt72mb" path="res://Items/xp_drop.tscn" id="3_hmgbn"]
+
+[node name="Pool" type="Node2D"]
+script = ExtResource("1_dv0xp")
+bullet_scene = ExtResource("2_7s633")
+XPdrop = ExtResource("3_hmgbn")

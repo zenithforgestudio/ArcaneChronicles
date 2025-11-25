@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cm0micrnqa5q0"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_5rf6s"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/HomingFlameUpgradeCards/homing_flame_upgrade_card_1.gd" id="2_qwyjl"]
+[ext_resource type="Texture2D" uid="uid://b5tlroold7ecs" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire Pillar/Purple Fire/Purple Fire12.png" id="3_m4ldc"]
+
+[node name="HomingFlameUpgradeCard1" instance=ExtResource("1_5rf6s")]
+script = ExtResource("2_qwyjl")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Flame
+Curse"
+
+[node name="BulletCounter" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="0"]
+text = "+1"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_m4ldc")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+size_flags_vertical = 3
+text = "A magic flame will
+start following and
+burning enemies
+"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

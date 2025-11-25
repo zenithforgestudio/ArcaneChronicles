@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjdryvdcpngrv"]
+
+[ext_resource type="Script" path="res://Crimson Mage Player/Crimson Mage Abilities/orbitting_skulls_path.gd" id="1_t22sw"]
+[ext_resource type="PackedScene" uid="uid://dks218yv4is1k" path="res://Crimson Mage Player/Crimson Mage Abilities/floating_skull.tscn" id="3_7eo6j"]
+
+[sub_resource type="Curve2D" id="Curve2D_o7r4s"]
+
+[node name="OrbittingSkullsPath" type="Path2D" groups=["RuneOrbitPath"]]
+curve = SubResource("Curve2D_o7r4s")
+script = ExtResource("1_t22sw")
+floating_skull_scene = ExtResource("3_7eo6j")

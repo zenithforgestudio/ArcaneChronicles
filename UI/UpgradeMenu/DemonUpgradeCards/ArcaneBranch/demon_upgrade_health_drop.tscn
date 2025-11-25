@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://jdau1qi5sxe7"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_oi6wt"]
+[ext_resource type="Script" uid="uid://clogy4ddtu4r0" path="res://UI/UpgradeMenu/DemonUpgradeCards/ArcaneBranch/demon_upgrade_health_drop.gd" id="2_gxi4s"]
+[ext_resource type="Texture2D" uid="uid://qhheg0wqhk11" path="res://Crimson Palette/Collectibles/Heart Round - Copy (2).png" id="3_nor7q"]
+
+[node name="DemonUpgradeHealthDrop" instance=ExtResource("1_oi6wt")]
+script = ExtResource("2_gxi4s")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Blood
+Tithe"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_nor7q")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+text = "Enemies have a
+small chance to 
+drop health orb"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

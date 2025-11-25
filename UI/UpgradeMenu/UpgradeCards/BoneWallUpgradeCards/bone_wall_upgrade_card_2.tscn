@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://r2preemnm8aq"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_8x02k"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/BoneWallUpgradeCards/bone_wall_upgrade_card_2.gd" id="2_m5cvu"]
+[ext_resource type="Texture2D" uid="uid://fi4bqq2kfqkj" path="res://UI/UpgradeMenu/UpgradeCardIcons/BoneWall front perspective.png" id="3_txui6"]
+
+[node name="BoneWallUpgradeCard2" instance=ExtResource("1_8x02k")]
+script = ExtResource("2_m5cvu")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Death's 
+Vanguard"
+
+[node name="BulletCounter" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="0"]
+text = "+1"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_txui6")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+text = "Summon an extra
+wall in front 
+of the player"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

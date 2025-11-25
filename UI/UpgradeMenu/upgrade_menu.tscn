@@ -1,0 +1,295 @@
+[gd_scene load_steps=42 format=3 uid="uid://ccni5y06t6ug1"]
+
+[ext_resource type="Script" uid="uid://dganyb81k4jms" path="res://UI/UpgradeMenu/upgrade_menu.gd" id="1_lyur4"]
+[ext_resource type="FontFile" uid="uid://xg0q0xdhjpgd" path="res://Fonts/antiquity-print.ttf" id="1_qsyub"]
+[ext_resource type="Shader" uid="uid://cu5nvasffh860" path="res://Shaders/dissolve_shader.tres" id="2_13oel"]
+[ext_resource type="Texture2D" uid="uid://cps3hfodmcsti" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation1-removebg-preview.png" id="2_dhd3i"]
+[ext_resource type="PackedScene" uid="uid://cbxa01m7hggi1" path="res://UI/UpgradeMenu/UpgradeCards/MagicOrbsUpgradeCards/magic_orbs_upgrade_card_1.tscn" id="3_cs8me"]
+[ext_resource type="Texture2D" uid="uid://lw32of8foa73" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation2-removebg-preview.png" id="3_gtev5"]
+[ext_resource type="Texture2D" uid="uid://b85permkqj7w5" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation3-removebg-preview.png" id="4_2prqb"]
+[ext_resource type="PackedScene" uid="uid://ltk5ox4ji00d" path="res://UI/UpgradeMenu/UpgradeCards/MagicOrbsUpgradeCards/magic_orbs_upgrade_card_2.tscn" id="4_53l64"]
+[ext_resource type="PackedScene" uid="uid://cc6rmhyr1nlmd" path="res://UI/UpgradeMenu/UpgradeCards/MagicOrbsUpgradeCards/magic_orbs_upgrade_card_3.tscn" id="5_a1tbe"]
+[ext_resource type="Texture2D" uid="uid://b2tegs5a2nw43" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation4-removebg-preview.png" id="5_yp2tu"]
+[ext_resource type="PackedScene" uid="uid://cqqnft1nynutv" path="res://UI/UpgradeMenu/UpgradeCards/AcidRainUpgradeCards/acid_rain_upgrade_card_1.tscn" id="6_74fku"]
+[ext_resource type="Texture2D" uid="uid://cb6qjug4hefa8" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation5-removebg-preview.png" id="6_v8awo"]
+[ext_resource type="Texture2D" uid="uid://cw40cgg011dru" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation6-removebg-preview.png" id="7_iupl2"]
+[ext_resource type="PackedScene" uid="uid://6fd1qnkkuth2" path="res://UI/Buttons/texture_button.tscn" id="7_kd01c"]
+[ext_resource type="Texture2D" uid="uid://n4cfjxxykjeu" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation7-removebg-preview.png" id="8_l018h"]
+[ext_resource type="Texture2D" uid="uid://d2uij7l66x7af" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation8-removebg-preview.png" id="9_juvsg"]
+[ext_resource type="Texture2D" uid="uid://byfbsistctvpk" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation9-removebg-preview.png" id="10_csil8"]
+[ext_resource type="Texture2D" uid="uid://65r8b00tvw1n" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation10-removebg-preview.png" id="11_ccdkk"]
+[ext_resource type="Texture2D" uid="uid://bx0nxeejqd5c4" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation11-removebg-preview.png" id="12_5sy35"]
+[ext_resource type="Texture2D" uid="uid://di08uw7tcf0ay" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation12-removebg-preview.png" id="13_j1xjd"]
+[ext_resource type="Texture2D" uid="uid://bn1wuffk0xp4f" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation13-removebg-preview.png" id="14_o5bsy"]
+[ext_resource type="Texture2D" uid="uid://c3dajpmeiw08g" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation14-removebg-preview.png" id="15_42d8s"]
+[ext_resource type="Texture2D" uid="uid://86dl52611tjf" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation15-removebg-preview.png" id="16_vc1jq"]
+[ext_resource type="Texture2D" uid="uid://nl7dljwpfcbl" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation16-removebg-preview.png" id="17_dxh8r"]
+[ext_resource type="Texture2D" uid="uid://b7axsqaornohc" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation17-removebg-preview.png" id="18_v527r"]
+[ext_resource type="Texture2D" uid="uid://dfmtb07ykfy83" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation18-removebg-preview.png" id="19_n681n"]
+[ext_resource type="Texture2D" uid="uid://da6f64mncs4sk" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation19-removebg-preview.png" id="20_6fbtf"]
+[ext_resource type="Texture2D" uid="uid://dtkqs7ywwbasi" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation20-removebg-preview.png" id="21_gapxr"]
+[ext_resource type="Texture2D" uid="uid://be23f4uafmrbb" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation21-removebg-preview.png" id="22_i5ut1"]
+[ext_resource type="Texture2D" uid="uid://chast11r43mw5" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation22-removebg-preview.png" id="23_6l3vu"]
+[ext_resource type="Texture2D" uid="uid://bk0q1kcnjr1l6" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation23-removebg-preview.png" id="24_g3hfl"]
+[ext_resource type="Texture2D" uid="uid://dgra0hbqulma2" path="res://UI/Book Opening Menu Animation/Book Animations No Background - Color Swap/Book_Animation24-removebg-preview.png" id="25_omngv"]
+[ext_resource type="Texture2D" uid="uid://d07823nfawq3r" path="res://UI/Buttons/LobbyButton/Button Normal.png" id="32_5jbf6"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_fxgsh"]
+frequency = 0.02
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_slwbs"]
+noise = SubResource("FastNoiseLite_fxgsh")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r1hbv"]
+shader = ExtResource("2_13oel")
+shader_parameter/Noise = SubResource("NoiseTexture2D_slwbs")
+shader_parameter/DissolveValue = 1.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n5nps"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dhd3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gtev5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2prqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yp2tu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_v8awo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iupl2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_l018h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_juvsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_csil8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ccdkk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5sy35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_j1xjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_o5bsy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_42d8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_vc1jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_dxh8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_v527r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_n681n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_6fbtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_gapxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_i5ut1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_6l3vu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_g3hfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_omngv")
+}],
+"loop": false,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="Animation" id="Animation_btlsy"]
+resource_name = "Dissolve"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/DissolveValue")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_c4lu0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/DissolveValue")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_glqck"]
+resource_name = "Reset"
+length = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/DissolveValue")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c7yde"]
+_data = {
+&"Dissolve": SubResource("Animation_btlsy"),
+&"RESET": SubResource("Animation_c4lu0"),
+&"Reset": SubResource("Animation_glqck")
+}
+
+[node name="UpgradeMenu" type="Control" groups=["UpgradeMenu"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lyur4")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="BookAnimationSprite" type="AnimatedSprite2D" parent="MarginContainer/Control"]
+material = SubResource("ShaderMaterial_r1hbv")
+position = Vector2(5, 0)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_n5nps")
+frame = 23
+frame_progress = 1.0
+
+[node name="BookAnimationPlayer" type="AnimationPlayer" parent="MarginContainer/Control/BookAnimationSprite"]
+libraries = {
+&"": SubResource("AnimationLibrary_c7yde")
+}
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="Control" type="Control" parent="MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/Panel/VBoxContainer"]
+self_modulate = Color(0.0745098, 0.00784314, 0.0313726, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_qsyub")
+text = "Level Up! Choose an Upgrade!"
+
+[node name="Control4" type="Control" parent="MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control5" type="Control" parent="MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Control" type="Control" parent="MarginContainer/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="MagicOrbsUpgradeCard1" parent="MarginContainer/Panel/VBoxContainer/HBoxContainer" instance=ExtResource("3_cs8me")]
+layout_mode = 2
+
+[node name="MagicOrbsUpgradeCard2" parent="MarginContainer/Panel/VBoxContainer/HBoxContainer" instance=ExtResource("4_53l64")]
+layout_mode = 2
+
+[node name="MagicOrbsUpgradeCard3" parent="MarginContainer/Panel/VBoxContainer/HBoxContainer" instance=ExtResource("5_a1tbe")]
+layout_mode = 2
+
+[node name="AcidRainUpgradeCard1" parent="MarginContainer/Panel/VBoxContainer/HBoxContainer" instance=ExtResource("6_74fku")]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="MarginContainer/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Control6" type="Control" parent="MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control7" type="Control" parent="MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="RerollButton" parent="MarginContainer/Panel/VBoxContainer/HBoxContainer2" instance=ExtResource("7_kd01c")]
+layout_mode = 2
+texture_disabled = ExtResource("32_5jbf6")
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/VBoxContainer/HBoxContainer2/RerollButton"]
+self_modulate = Color(0.0745098, 0.00784314, 0.0313726, 1)
+layout_mode = 0
+offset_left = 15.0
+offset_top = 9.0
+offset_right = 78.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("1_qsyub")
+text = "Reroll"
+
+[connection signal="pressed" from="MarginContainer/Panel/VBoxContainer/HBoxContainer2/RerollButton" to="." method="_on_reroll_button_pressed"]

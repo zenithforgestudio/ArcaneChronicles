@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://drdbv6ts2jifx"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_njf8t"]
+[ext_resource type="Script" uid="uid://dfkd3v8d48o8b" path="res://UI/UpgradeMenu/DemonUpgradeCards/NecromancerBranch/demon_upgrade_bone_walls.gd" id="2_4p8tg"]
+[ext_resource type="Texture2D" uid="uid://fi4bqq2kfqkj" path="res://UI/UpgradeMenu/UpgradeCardIcons/BoneWall front perspective.png" id="3_sr0sw"]
+
+[node name="DemonUpgradeBoneWalls" instance=ExtResource("1_njf8t")]
+script = ExtResource("2_4p8tg")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Mourning 
+Wall"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_sr0sw")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+text = "Walls leave
+behind 
+tombstones"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://cg8f68wu5bn51"]
+
+[ext_resource type="Texture2D" uid="uid://dn3yf8fmgike8" path="res://Crimson Mage Player/Crimson Mage Abilities/Fire/Sprite-0001.png" id="1_tuqww"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4f2d"]
+atlas = ExtResource("1_tuqww")
+region = Rect2(0, 0, 13, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jl8mh"]
+atlas = ExtResource("1_tuqww")
+region = Rect2(13, 0, 13, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrey5"]
+atlas = ExtResource("1_tuqww")
+region = Rect2(26, 0, 13, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ab437"]
+atlas = ExtResource("1_tuqww")
+region = Rect2(39, 0, 13, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0l05w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4f2d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jl8mh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrey5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ab437")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}]
+
+[node name="FireAnimation" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_0l05w")
+animation = &"Idle"
+autoplay = "Idle"
+frame = 3
+frame_progress = 0.476821

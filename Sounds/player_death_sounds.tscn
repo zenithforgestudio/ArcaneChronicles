@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c34w4dj6c5ogx"]
+
+[ext_resource type="Script" path="res://Sounds/player_death_sounds.gd" id="1_ui4ty"]
+[ext_resource type="AudioStream" uid="uid://cfs6v3ykqhwuv" path="res://Sounds/PlayerDeathSounds/796875__solarpsychedelic__gothic-mood.wav" id="2_r8pp6"]
+[ext_resource type="AudioStream" uid="uid://cbexmd7whlmat" path="res://Sounds/PlayerDeathSounds/Ominous Music by stuntstudio -- https_freesound.org_s_796543 -- License Attribution 4.0.mp3" id="3_t7ql1"]
+
+[node name="PlayerDeathSounds" type="Node2D"]
+script = ExtResource("1_ui4ty")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_r8pp6")
+volume_db = -10.0
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_t7ql1")
+volume_db = -10.0
+autoplay = true

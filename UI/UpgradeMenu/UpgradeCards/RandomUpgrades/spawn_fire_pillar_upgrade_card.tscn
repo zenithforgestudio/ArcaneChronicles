@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cttjck2d0p6xt"]
+
+[ext_resource type="PackedScene" uid="uid://gyfsqh7ff14d" path="res://UI/UpgradeMenu/upgrade_card.tscn" id="1_uutil"]
+[ext_resource type="Script" path="res://UI/UpgradeMenu/UpgradeCards/RandomUpgrades/spawn_fire_pillar_upgrade_card.gd" id="2_js52w"]
+[ext_resource type="Texture2D" uid="uid://bsq2wxvc82dcs" path="res://UI/UpgradeMenu/UpgradeCardIcons/Fire Pillar.png" id="3_cqqyr"]
+
+[node name="SpawnFirePillarUpgradeCard" instance=ExtResource("1_uutil")]
+script = ExtResource("2_js52w")
+
+[node name="UpgradeTitle" parent="UpgradeCard/VBoxContainer" index="1"]
+text = "Pillar of
+Faith"
+
+[node name="TextureRect" parent="UpgradeCard/VBoxContainer/HBoxContainer" index="1"]
+texture = ExtResource("3_cqqyr")
+
+[node name="Description" parent="UpgradeCard/VBoxContainer" index="4"]
+text = "Spawn fire
+pillars
+peridodically
+"
+
+[connection signal="pressed" from="UpgradeCard/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
